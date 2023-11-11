@@ -106,6 +106,23 @@ img {
 .services-item {
   text-align: center;
 }
+.services-item::before {
+  content: "";
+  display: inline-block;
+  background-image: url("../images/services_svg1.svg");
+  width: 70px;
+  height: 70px;
+  border: 3px solid var(--accent-color);
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+.services-item:nth-child(2)::before {
+  background-image: url("../images/services_svg2.svg");
+}
+.services-item:last-child::before {
+  background-image: url("../images/services_svg3.svg");
+}
 .services-item-title {
   color: var(--main-color);
   font-size: 18px;
