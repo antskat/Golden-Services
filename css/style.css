@@ -79,10 +79,28 @@ img {
   text-transform: uppercase;
   text-decoration: none;
   transition: 0.3s;
+  position: relative;
+}
+.nav-link::after {
+  position:absolute;
+  content: "";
+  display: block;
+  background-color: none;
+  height: 3px;
+  border-radius: 10px;
+  left: 50%;
+  width: 0;
+  transition: 0.3s;
 }
 .nav-link:hover,
 .nav-link:focus {
-  color: #df2504;
+  color: #bca142;
+}
+.nav-link:hover::after,
+.nav-link:focus::after {
+  width: 100%;
+  background-color: #bca142;
+  left: 0;
 }
 .services {
   padding-top: 110px;
